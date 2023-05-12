@@ -176,6 +176,15 @@ form button{
 
 }
 
+form button:hover{
+    background-color: rgb(71, 201, 71);
+    ;
+}
+input:focus{
+    outline-color: rgb(75, 190, 121);
+}
+
+
 .download{
     margin-left: 128px;
     -webkit-text-stroke: 1px;
