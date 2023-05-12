@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(28, 32, 36);
+}
+
+header{
+    background-color: rgb(0, 0, 0);
+    padding-bottom: 14px;
+
+}
+
+header,
+section h2,
+section h3,
+form button{
+    font-family: 'Sora', sans-serif;
+    font-weight: normal;
+}
+body, input, textarea{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1390px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+header .container img{
+    height: 120px;
+    margin-top: 25px;
+}
+
+.container nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.container nav li{
+    display: inline;
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section{
+    color: #fff;
+}
+
+section .container .capa{
+    height: 340px;
+}
+
+section .container .logops5{
+    height: 54px;
+    padding-top: 20px;
+
+}
+section .container .logopc{
+    height: 45px;
+    padding-top: 20px;
+    left: 66px;
+    margin-top: 4px;
+
+}
+
+section .container{
+    align-items: flex-start;
+    max-width: 1300px;
+}
+
+section{
+    padding: 24px 0;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+section p{
+    margin-bottom: 8px;
+}
+
+header .container,
+section .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo li {
+    display: inline-block;
+    margin-right: 6px;
+    position: relative;
+    margin-top: 25px;
+}
+
+
+.logo li .logops5 {
+    position: absolute;
+    top: -40px;
+}
+.logopc{
+    position: absolute;
+    top: -40px;
+}
+section .container p {
+    font-size: 14px;
+}
+
+.capa {
+    margin-right: 40px;
+}
+
+section .container .titulo1{
+    font: weight 800px;
+    -webkit-text-stroke: 1px;
+}
+
+.social-links li{
+    list-style-type: none;
+    display: inline;
+    margin-right: 8px;
+    
+}
+
+.social-links img{
+    height: 35px;
+}
+
+#secondpart .container{
+    display: block;
+
+}
+
+.form_contact{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1260px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+form .nome-email,
+form button{
+    display: block;
+    width: 220px;
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+form button{
+    background-color: rgb(112, 243, 112);
+    color: #2e0c64;
+    border-radius: 20px;
+    height: 60px;
+    width: 200px;
+}
+
+form button{
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+
+.download{
+    margin-left: 128px;
+    -webkit-text-stroke: 1px;
+
+}
+
+.suporte{
+    margin-bottom: 10px;
+    -webkit-text-stroke: 1px;
+
+    
+}
+
+.links-chat li{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.links-chat li a{
+    color:#fff;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    padding: 16px 0;
+}
+
+footer .container p{
+    color: #fff;
+    margin-left: 400px;
+}
+
+.social h3{
+    margin-left: -5px;
+    padding-bottom: 8px;
+    -webkit-text-stroke: 1px;
+
+}
+
+.social ul li .instagramicon{
+    height: 43px;
+}
+
+.tiktokicon{
+margin: 4px;}
