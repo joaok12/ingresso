@@ -65,12 +65,15 @@ img {
   cursor: pointer;
 }
 
-.card:hover{ 
+.card:hover {
   background-color: rgb(0, 0, 0);
 }
 
 .blockright {
   margin-left: 15px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .blockleft {
@@ -88,27 +91,70 @@ h2 {
   background-color: rgb(91, 91, 91);
   font-weight: 900;
   font-size: 14px;
-  padding: 3px;
+  padding: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
   border-radius: 5px;
   margin-top: 13px;
+  width: max-content;
+}
+
+.codigo:hover {
+  background-color: rgb(41, 41, 41);
+  color: floralwhite;
+}
+
+.tags_button {
+  display: inline-block;
+  color: black;
+  background-color: rgb(91, 91, 91);
+  font-weight: 900;
+  font-size: 14px;
+  padding: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+
+  border-radius: 5px;
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+.tags_button:hover {
+  background-color: rgb(41, 41, 41);
+  color: floralwhite;
 }
 
 .sala {
   color: rgb(218, 218, 218);
   font-size: 11px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .icondata {
-  display: inline-block;
-  margin-top: 2px;
 }
 
 .data {
   font-size: 14px;
   color: rgb(205, 205, 205);
+  margin-left: 9px;
 }
 
 .datadiv {
+  display: flex;
   align-items: center;
+  margin-bottom: 9px;
+}
+
+/*  */
+
+.icontime {
+  display: flex;
+  align-items: center;
+}
+.time {
+  color: rgb(205, 205, 205);
+  margin-left: 9px;
+}
+
+.tags {
+  margin-top: auto;
 }
