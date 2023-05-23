@@ -69,6 +69,12 @@ img {
   background-color: rgb(0, 0, 0);
 }
 
+@media (max-width: 768px) {
+  .tags_button:active {
+    background-color: rgb(53, 53, 53); /* Altere a cor para a desejada */
+    color: white; /* Altere a cor para a desejada */
+  }
+  
 .blockright {
   margin-left: 15px;
   margin-left: 15px;
