@@ -11,6 +11,11 @@ html {
 body {
   background-color: rgb(49, 49, 49);
   font-family: "Montserrat", sans-serif;
+  transition: opacity 0.3s ease-in-out;
+
+}
+.transicao-pagina {
+  transition: opacity 0.3s ease-in-out;
 }
 
 header div {
@@ -18,6 +23,10 @@ header div {
   justify-content: center;
   margin-top: 60px;
   margin-bottom: 25px;
+}
+
+a{
+  text-decoration: none;
 }
 
 .arrow_icon {
@@ -69,12 +78,6 @@ img {
   background-color: rgb(0, 0, 0);
 }
 
-@media (max-width: 768px) {
-  .tags_button:active {
-    background-color: rgb(53, 53, 53); /* Altere a cor para a desejada */
-    color: white; /* Altere a cor para a desejada */
-  }
-  
 .blockright {
   margin-left: 15px;
   margin-left: 15px;
@@ -103,13 +106,12 @@ h2 {
   border-radius: 5px;
   margin-top: 13px;
   width: max-content;
-  z-index: 30;
-
 }
 
 .codigo:hover {
   background-color: rgb(41, 41, 41);
   color: floralwhite;
+  z-index: 30;
 }
 
 .tags_button {
@@ -125,12 +127,18 @@ h2 {
   border-radius: 5px;
   margin-top: 13px;
   margin-bottom: 10px;
+  z-index: 30;
 }
 .tags_button:hover {
   background-color: rgb(41, 41, 41);
   color: floralwhite;
 }
-
+@media (max-width: 768px) {
+  .tags_button:active {
+    background-color: rgb(53, 53, 53); /* Altere a cor para a desejada */
+    color: white; /* Altere a cor para a desejada */
+  }
+}
 .sala {
   color: rgb(218, 218, 218);
   font-size: 11px;
@@ -166,3 +174,4 @@ h2 {
 .tags {
   margin-top: auto;
 }
+
