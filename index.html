@@ -151,11 +151,17 @@
 
 
   <script>
-    // Função para abrir o link em modo de aplicativo de tela cheia
+   // Verifica se o navegador é um dispositivo iOS (iPhone, iPad, iPod)
+var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+// Verifica se a página está no modo de aplicativo de tela cheia (instalado na tela inicial)
+var isInWebAppiOS = window.navigator.standalone == true;
+
+// Função para abrir o link em modo de aplicativo de tela cheia
 function openInFullScreenApp(url) {
   if (isIOS && isInWebAppiOS) {
     // Redireciona para a nova página dentro do modo de aplicativo de tela cheia
-    window.location.href = url;
+    window.location.replace(url);
   } else {
     // Abre o link normalmente no navegador Safari
     window.open(url, "_blank");
@@ -170,9 +176,9 @@ document.addEventListener("click", function(event) {
   if (target.tagName === "A" && target.hasAttribute("href")) {
     var href = target.getAttribute("href");
 
-    // Verifica se o link é para a página "./mario.html"
-    if (href === "./mario.html") {
-      // Abre o link para a página "./mario.html" em modo de aplicativo de tela cheia
+    // Verifica se o link é para a página "mario.html"
+    if (href === "mario.html") {
+      // Abre o link para a página "mario.html" em modo de aplicativo de tela cheia
       openInFullScreenApp(href);
 
       // Cancela o comportamento padrão do clique no link
