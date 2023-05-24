@@ -148,6 +148,40 @@
     </div>
 
   </div>
+
+
+  <script>
+    // Função para abrir o link em modo de aplicativo de tela cheia
+function openInFullScreenApp(url) {
+  if (isIOS && isInWebAppiOS) {
+    // Redireciona para a nova página dentro do modo de aplicativo de tela cheia
+    window.location.href = url;
+  } else {
+    // Abre o link normalmente no navegador Safari
+    window.open(url, "_blank");
+  }
+}
+
+// Intercepta os cliques nos links e redireciona para o modo de aplicativo de tela cheia
+document.addEventListener("click", function(event) {
+  var target = event.target;
+  
+  // Verifica se o elemento clicado é um link (<a>) com um atributo "href" válido
+  if (target.tagName === "A" && target.hasAttribute("href")) {
+    var href = target.getAttribute("href");
+
+    // Verifica se o link é para a página "./mario.html"
+    if (href === "./mario.html") {
+      // Abre o link para a página "./mario.html" em modo de aplicativo de tela cheia
+      openInFullScreenApp(href);
+
+      // Cancela o comportamento padrão do clique no link
+      event.preventDefault();
+    }
+  }
+});
+
+  </script>
 </body>
 
 </html>
