@@ -45,10 +45,15 @@ body {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: opacity 1.5s ease;
-  top: 325px;
-  left: 193px;
+  top: 320px;
+  left: 220px;
 }
 
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
 
 @keyframes animacao-entrada {
   from {
