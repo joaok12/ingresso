@@ -69,101 +69,105 @@
     </svg>
 
 
-<script>
-
-// Função para desativar a rolagem vertical
-function disableVerticalScroll() {
-  // Salva a posição atual de rolagem
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
-
-  // Adiciona uma classe para desativar a rolagem
-  document.body.classList.add('no-scroll');
-
-  // Mantém a posição atual de rolagem
-  document.body.style.top = '-' + scrollTop + 'px';
-  document.body.style.left = '-' + scrollLeft + 'px';
-}
-
-// Função para reativar a rolagem vertical
-function enableVerticalScroll() {
-  // Remove a classe para reativar a rolagem
-  document.body.classList.remove('no-scroll');
-
-  // Restaura a posição de rolagem original
-  var scrollTop = parseInt(document.body.style.top || '0');
-  var scrollLeft = parseInt(document.body.style.left || '0');
-  window.scrollTo(scrollLeft, scrollTop);
-}
-
-// Desativa a rolagem vertical
-disableVerticalScroll();
-
-
-
-
-// Elemento do ingresso
-var ticket = document.getElementById('top-ticket');
-
-// Elemento do span a ser exibido
-var spanValido = document.getElementById('valido');
-
-// Variáveis para controlar o arrasto
-var startX = 0;
-var currentX = 0;
-var isDragging = false;
-
-// Variáveis para controlar o deslocamento vertical
-var startY = 0;
-var currentY = 0;
-
-// Variáveis para a animação de deslocamento vertical
-var timeout = null;
-
-// Evento de toque inicial
-ticket.addEventListener('touchstart', function(event) {
-  startX = event.touches[0].clientX;
-  currentX = startX;
-  startY = event.touches[0].clientY;
-  currentY = startY;
-
-  clearTimeout(timeout);
-  isDragging = true;
-});
-
-// Evento de toque em movimento
-ticket.addEventListener('touchmove', function(event) {
-  if (!isDragging) {
-    return;
-  }
-
-  var touch = event.touches[0];
-  currentX = touch.clientX;
-  currentY = touch.clientY;
-});
-
-// Evento de toque finalizado
-ticket.addEventListener('touchend', function() {
-  if (isDragging) {
-    // Exibe o alerta antes de iniciar a animação
-    alert('Você está no cinema mostrando seu ingresso ao bilheteiro?');
-
-    // Aplica o deslocamento vertical após 1 segundo
-    timeout = setTimeout(function() {
-      ticket.style.transform = 'translateY(50px)';
-
-      setTimeout(function() {
-        spanValido.style.opacity = '1';
-      }, 300);
-    }, 300);
-
-    isDragging = false;
-  }
-});
-
-
-</script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      // Função para desativar a rolagem vertical
+      function disableVerticalScroll() {
+        // Salva a posição atual de rolagem
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+    
+        // Adiciona uma classe para desativar a rolagem
+        document.body.classList.add('no-scroll');
+    
+        // Mantém a posição atual de rolagem
+        document.body.style.top = '-' + scrollTop + 'px';
+        document.body.style.left = '-' + scrollLeft + 'px';
+      }
+    
+      // Função para reativar a rolagem vertical
+      function enableVerticalScroll() {
+        // Remove a classe para reativar a rolagem
+        document.body.classList.remove('no-scroll');
+    
+        // Restaura a posição de rolagem original
+        var scrollTop = parseInt(document.body.style.top || '0');
+        var scrollLeft = parseInt(document.body.style.left || '0');
+        window.scrollTo(scrollLeft, scrollTop);
+      }
+    
+      // Desativa a rolagem vertical
+      disableVerticalScroll();
+    
+      // Elemento do ingresso
+      var ticket = document.getElementById('top-ticket');
+    
+      // Elemento do span a ser exibido
+      var spanValido = document.getElementById('valido');
+    
+      // Variáveis para controlar o arrasto
+      var startX = 0;
+      var currentX = 0;
+      var isDragging = false;
+    
+      // Variáveis para controlar o deslocamento vertical
+      var startY = 0;
+      var currentY = 0;
+    
+      // Variáveis para a animação de deslocamento vertical
+      var timeout = null;
+    
+      // Evento de toque inicial
+      ticket.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].clientX;
+        currentX = startX;
+        startY = event.touches[0].clientY;
+        currentY = startY;
+    
+        clearTimeout(timeout);
+        isDragging = true;
+      });
+    
+      // Evento de toque em movimento
+      ticket.addEventListener('touchmove', function(event) {
+        if (!isDragging) {
+          return;
+        }
+    
+        var touch = event.touches[0];
+        currentX = touch.clientX;
+        currentY = touch.clientY;
+      });
+    
+      // Evento de toque finalizado
+      ticket.addEventListener('touchend', function() {
+        if (isDragging) {
+          // Exibe o alerta antes de iniciar a animação
+          Swal.fire({
+            title: 'Alerta',
+            text: 'Deseja iniciar a animação?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Sim',
+            cancelButtonText: 'Não'
+          }).then(function(result) {
+            if (result.isConfirmed) {
+              // Aplica o deslocamento vertical após 1 segundo
+              timeout = setTimeout(function() {
+                ticket.style.transform = 'translateY(50px)';
+    
+                setTimeout(function() {
+                  spanValido.style.opacity = '1';
+                }, 300);
+              }, 300);
+            }
+          });
+    
+          isDragging = false;
+        }
+      });
+    </script>
+    
 
   </div>
 </body>
