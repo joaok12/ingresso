@@ -145,10 +145,13 @@ ticket.addEventListener('touchmove', function(event) {
 // Evento de toque finalizado
 ticket.addEventListener('touchend', function() {
   if (isDragging) {
+    // Exibe o alerta antes de iniciar a animação
+    alert('Você está no cinema mostrando seu ingresso ao bilheteiro?');
+
     // Aplica o deslocamento vertical após 1 segundo
     timeout = setTimeout(function() {
       ticket.style.transform = 'translateY(50px)';
-      
+
       setTimeout(function() {
         spanValido.style.opacity = '1';
       }, 300);
