@@ -35,8 +35,18 @@ body {
   animation: animacao-entrada 0.5s ease-in-out;
 }
 
-svg{
-  
+.top-ticket{
+  transition: all 1s ease;
+
+}
+
+.valido{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  top: 325px;
+  left: 193px;
 }
 
 
