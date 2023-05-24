@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="no-scroll">
   <div class="ticket animacao-entrada">
     <footer>  <span class="titulo">Mostre esse ingresso na entrada da sessão</span>
     </footer>
@@ -70,6 +70,38 @@
 
 
 <script>
+
+// Função para desativar a rolagem vertical
+function disableVerticalScroll() {
+  // Salva a posição atual de rolagem
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
+
+  // Adiciona uma classe para desativar a rolagem
+  document.body.classList.add('no-scroll');
+
+  // Mantém a posição atual de rolagem
+  document.body.style.top = '-' + scrollTop + 'px';
+  document.body.style.left = '-' + scrollLeft + 'px';
+}
+
+// Função para reativar a rolagem vertical
+function enableVerticalScroll() {
+  // Remove a classe para reativar a rolagem
+  document.body.classList.remove('no-scroll');
+
+  // Restaura a posição de rolagem original
+  var scrollTop = parseInt(document.body.style.top || '0');
+  var scrollLeft = parseInt(document.body.style.left || '0');
+  window.scrollTo(scrollLeft, scrollTop);
+}
+
+// Desativa a rolagem vertical
+disableVerticalScroll();
+
+
+
+
 // Elemento do ingresso
 var ticket = document.getElementById('top-ticket');
 
