@@ -97,7 +97,7 @@ h2 {
 .codigo {
   display: inline-block;
   color: black;
-  background-color: rgb(91, 91, 91);
+  background-color: rgb(255, 145, 0);
   font-weight: 900;
   font-size: 14px;
   padding: 4px;
@@ -109,7 +109,7 @@ h2 {
 }
 
 .codigo:hover {
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(218, 123, 0);
   color: floralwhite;
   z-index: 30;
 }
@@ -117,7 +117,7 @@ h2 {
 .tags_button {
   display: inline-block;
   color: black;
-  background-color: rgb(91, 91, 91);
+  background-color: rgb(255, 145, 0);
   font-weight: 900;
   font-size: 14px;
   padding: 4px;
@@ -129,8 +129,9 @@ h2 {
   margin-bottom: 10px;
   z-index: 30;
 }
+
 .tags_button:hover {
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(217, 123, 0);
   color: floralwhite;
 }
 @media (max-width: 768px) {
