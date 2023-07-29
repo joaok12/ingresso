@@ -128,13 +128,13 @@ hr {
   animation-timing-function: steps(1);
   animation-iteration-count: infinite;
 }
-.ticket::before {
+.div-segundo::before {
   content: "";
   position: absolute;
   width: 130px;
   height: 1500px;
-  top: -10px;
-  left: -60px;
+  top: -51px;
+  left: -130px;
   background-color: rgb(49, 49, 49);
   z-index: 999;
 }
@@ -143,7 +143,7 @@ hr {
   position: absolute;
   width: 140px;
   height: 1500px;
-  top: -10px;
+  top: -15px;
   left: 306px;
   background-color: rgb(49, 49, 49);
   z-index: 999;
