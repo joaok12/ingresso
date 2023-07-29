@@ -128,39 +128,39 @@ hr {
   animation-timing-function: steps(1);
   animation-iteration-count: infinite;
 }
-.ticket::before{
-  content: '';
+.ticket::before {
+  content: "";
   position: absolute;
-  width: 47px;
+  width: 130px;
   height: 1500px;
   top: -10px;
-  left: -10px;
-  background-color:rgb(49, 49, 49) ;
+  left: -60px;
+  background-color: rgb(49, 49, 49);
   z-index: 999;
 }
-.div-primeiro::before{
-  content: '';
+.div-primeiro::before {
+  content: "";
   position: absolute;
-  width: 47px;
+  width: 140px;
   height: 1500px;
   top: -10px;
-  left: 299px;
-  background-color:rgb(49, 49, 49) ;
+  left: 306px;
+  background-color: rgb(49, 49, 49);
   z-index: 999;
 }
-.swap-icon{
+.swap-icon {
   width: 30px;
   top: 272px;
   position: absolute;
 }
 .circle {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 58px;
+  height: 58px;
 }
 
 .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -166px;
   left: -2px;
@@ -174,34 +174,32 @@ hr {
   width: 35px; /* control the size */
   aspect-ratio: 1;
   display: grid;
-  -webkit-mask: conic-gradient(from 22deg, #0003,#000);
-          mask: conic-gradient(from 22deg, #0003,#000);
+  -webkit-mask: conic-gradient(from 22deg, #0003, #000);
+  mask: conic-gradient(from 22deg, #0003, #000);
   animation: load 1s steps(8) infinite;
-    border-radius: 8px;
-position: absolute;
-top: 267px;
+  border-radius: 8px;
+  position: absolute;
+  top: 267px;
 }
 .loader,
 .loader:before {
   --_g: linear-gradient(#ffffff 0 0) 50%; /* update the color here */
-  background: 
-    var(--_g)/34% 8%  space no-repeat,
-    var(--_g)/8%  34% no-repeat space;
-    
+  background: var(--_g) / 34% 8% space no-repeat,
+    var(--_g) / 8% 34% no-repeat space;
 }
 
-.message{
+.message {
   left: 5px;
   bottom: -330px;
   position: absolute;
   font-size: 14px;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius:10px;
+  border-radius: 10px;
   z-index: 999;
   width: 360px;
 }
 
-.question{
+.question {
   color: rgb(0, 0, 0, 0.4);
   font-size: 10px;
   text-align: center;
@@ -212,26 +210,26 @@ top: 267px;
   bottom: 54px;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
-  border-radius:10px;
+  border-radius: 10px;
   z-index: 999;
   width: 360px;
 }
-.alert hr{
+.alert hr {
   position: absolute;
   left: -11px;
   width: 370px;
   height: 1px;
   background-color: rgba(75, 75, 75, 0.1);
 }
-.options{
+.options {
   color: rgb(0, 132, 255);
   font-size: 15px;
   text-align: center;
   padding: 14px 8px;
 }
 
-.message{
-bottom: -520px;
+.message {
+  bottom: -520px;
 }
 .message {
   transition: transform 1s ease;
@@ -245,53 +243,49 @@ bottom: -520px;
   transform: translateY(100%);
 }
 
-
-
 .loader:before {
   content: "";
   transform: rotate(45deg);
-  
 }
 @keyframes load {
-  from {transform: rotate(0turn)}
-  to   {transform: rotate(1turn)}
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
-
-
-
-
-
 
 @keyframes pulo {
   0% {
     transform: translateX(0);
   }
   4% {
-    transform: translateX(19px);
+    transform: translateX(15px);
   }
   8% {
-    transform: translateX(38px);
+    transform: translateX(34.4px);
   }
   12% {
-    transform: translateX(57px);
+    transform: translateX(54px);
   }
   16% {
-    transform: translateX(76px);
+    transform: translateX(73.4px);
   }
   20% {
-    transform: translateX(95px);
+    transform: translateX(93px);
   }
   24% {
-    transform: translateX(114px);
+    transform: translateX(112px);
   }
   28% {
-    transform: translateX(133px);
+    transform: translateX(131.5px);
   }
   32% {
-    transform: translateX(152px);
+    transform: translateX(151px);
   }
   36% {
-    transform: translateX(171px);
+    transform: translateX(170.5px);
   }
   40% {
     transform: translateX(190px);
@@ -300,42 +294,42 @@ bottom: -520px;
     transform: translateX(209px);
   }
   48% {
-    transform: translateX(230px);
+    transform: translateX(228.5px);
   }
   52% {
-    transform: translateX(249px);
+    transform: translateX(248px);
   }
   56% {
-    transform: translateX(268px);
+    transform: translateX(267.5px);
   }
-  62% {
+  60% {
     transform: translateX(287px);
   }
-  66% {
-    transform: translateX(306px);
+  64% {
+    transform: translateX(306.5px);
   }
-  70% {
-    transform: translateX(325px);
+  68% {
+    transform: translateX(325.5px);
   }
-  74% {
-    transform: translateX(344px);
+  72% {
+    transform: translateX(345px);
   }
-  78% {
-    transform: translateX(363px);
+  76% {
+    transform: translateX(364px);
   }
-  82% {
-    transform: translateX(382px);
+  80% {
+    transform: translateX(384px);
   }
-  86% {
-    transform: translateX(401px);
+  84% {
+    transform: translateX(403px);
   }
-  90% {
-    transform: translateX(420px);
+  88% {
+    transform: translateX(423px);
   }
-  94% {
-    transform: translateX(439px);
+  92% {
+    transform: translateX(441.6px);
   }
-  98% {
+  96% {
     transform: translateX(560px);
   }
   100% {
