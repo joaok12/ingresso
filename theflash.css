@@ -11,7 +11,16 @@ html {
 body {
   background-color: rgb(49, 49, 49);
   font-family: "Montserrat", sans-serif;
+  position: relative;
 }
+
+body {
+  zoom: 1; /* Aumenta a escala em 20% (1.0 = 100%) */
+  -moz-transform: scale(1.2); /* Para o Firefox */
+  -webkit-transform: scale(1.2); /* Para o Chrome, Safari, Opera */
+  -o-transform: scale(1.2); /* Para o Opera (antigo) */
+}
+
 div {
   margin: 0;
 }
@@ -118,6 +127,11 @@ hr {
   background-color: rgb(255, 255, 255, 0.6);
 }
 
+.corte{
+  position: absolute;
+  bottom: -80px;
+}
+
 .bolinhas {
   position: absolute;
   top: 50px;
@@ -157,12 +171,14 @@ hr {
   position: relative;
   width: 58px;
   height: 58px;
+  /* bottom: -137px; */
+  /* left: 0px; */
 }
 
 .circle::before {
   content: "";
   position: absolute;
-  top: -166px;
+  top: -30px;
   left: -2px;
   width: 100%;
   height: 100%;
@@ -189,15 +205,13 @@ hr {
 }
 
 .message {
-  bottom: -330px;
+  /* bottom: 0px; */
   position: absolute;
   font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.918);
   border-radius: 10px;
   z-index: 999;
-  width: 360px;
-  display: inline-block;
-  margin: 10px;
+  /* width: 342px; */
 }
 
 .question {
@@ -206,14 +220,21 @@ hr {
   text-align: center;
   padding: 15px 10px;
 }
+.alerta{
+  position: absolute;
+  bottom: -483px;
+  z-index: 999;
+}
+
 
 .alert {
-  bottom: 54px;
+  bottom: 70px;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
   z-index: 999;
-  width: 360px;
+  width: 311px;
+  left: -156px;
 }
 .alert hr {
   position: absolute;
@@ -224,7 +245,13 @@ hr {
 }
 .options {
   color: rgb(0, 132, 255);
-  font-size: 15px;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 8px;
+}
+.options2 {
+  color: rgb(0, 132, 255);
+  font-size: 14px;
   text-align: center;
   padding: 14px 8px;
 }
@@ -248,6 +275,43 @@ hr {
   content: "";
   transform: rotate(45deg);
 }
+
+.pergunta{
+  color: rgb(0, 0, 0, 0.4);
+  font-size: 10px;
+  text-align: center;
+  padding: 15px 20px 10px 20px;
+  /* bottom: -66px; */
+  /* position: absolute; */
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px 10px 0px 0px;
+  z-index: 999;
+  width: 324px;
+  left: 45px;
+}
+.opcao1{
+  color: rgb(0, 132, 255);
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 8px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0px 0px 10px 10px;
+}
+.opcao2{
+  color: rgb(0, 132, 255);
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 8px;
+  background: white;
+  bottom: -51px;
+  position: absolute;
+  border-radius: 10px;
+  width: 324px;
+  font-weight: 600;
+}
+
+
+
 @keyframes load {
   from {
     transform: rotate(0turn);
