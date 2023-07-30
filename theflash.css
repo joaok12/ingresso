@@ -309,7 +309,7 @@ hr {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 0px 0px 10px 10px;
 }
-.opcao1:active{
+.opcao1:hover{
   background-color:rgba(255, 255, 255, 0.5) ;
 }
 
