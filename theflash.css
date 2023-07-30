@@ -129,7 +129,7 @@ hr {
 
 .corte{
   position: absolute;
-  bottom: -80px;
+  bottom: -80.6px;
 }
 
 .bolinhas {
@@ -196,6 +196,7 @@ hr {
   border-radius: 8px;
   position: absolute;
   top: 267px;
+  display: none;
 }
 .loader,
 .loader:before {
@@ -222,7 +223,7 @@ hr {
 }
 .alerta{
   position: absolute;
-  bottom: -483px;
+  bottom: -508px;
   z-index: 999;
 }
 
@@ -297,6 +298,10 @@ hr {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 0px 0px 10px 10px;
 }
+.opcao1:active{
+  background-color:rgba(255, 255, 255, 0.5) ;
+}
+
 .opcao2{
   color: rgb(0, 132, 255);
   font-size: 14px;
