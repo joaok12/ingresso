@@ -131,12 +131,18 @@ hr {
   position: absolute;
   bottom: -80.6px;
 }
+.ticket_top{
+  z-index: 999;
+}
+.ticket_bottom{
+  z-index: 999;
+}
 
 .bolinhas {
   position: absolute;
   top: 50px;
   left: -140px;
-  z-index: 99;
+  z-index: 1;
   animation-name: pulo;
   animation-duration: 1.5s;
   animation-timing-function: steps(1);
@@ -166,6 +172,7 @@ hr {
   width: 30px;
   top: 272px;
   position: absolute;
+  z-index: 999;
 }
 .circle {
   position: relative;
@@ -185,6 +192,7 @@ hr {
   border-radius: 50%;
   background-color: rgb(0, 0, 0);
   opacity: 0.4;
+  z-index: 999;
 }
 .loader {
   width: 35px; /* control the size */
