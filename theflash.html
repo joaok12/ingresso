@@ -300,6 +300,7 @@
           } else {
             message.classList.remove('slide');
           }
+          
         }
       });
 
@@ -312,23 +313,31 @@
       document.querySelector('.opcao1').addEventListener('click', function () {
         var elements = document.querySelectorAll('.corte');
 
-        elements.forEach(function (element) {
-          element.animate([
-            // keyframes
-            { transform: 'translateY(0px)' },
-            { transform: 'translateY(50px)' }
-          ], {
-            // timing options
-            duration: 400,
-            iterations: 1,
-            fill: 'forwards'  // keep the element at the last keyframe value
-          });
-        });
-        var options = document.querySelector('.alerta');
-            options.style.transform = 'translateY(-2px)';
-            options.style.transition = 'transform 0.2s ease-out';
-      });
+        setTimeout(function () {
 
+          elements.forEach(function (element) {
+  element.animate([
+    // keyframes
+    { transform: 'translateY(0px)' },
+    { transform: 'translateY(50px)' }
+  ], {
+    // timing options
+    duration: 600,
+    iterations: 1,
+    fill: 'forwards',  // keep the element at the last keyframe value
+    easing: 'ease-out'  // adicionando o efeito ease-in-out
+  });
+});
+
+      }, 1000);
+
+
+        setTimeout(function () {
+        var options = document.querySelector('.alerta');
+        options.style.transform = 'translateY(2px)';
+        options.style.transition = 'transform 0.2s ease-out';
+      }, 80); // Defina o atraso correto aqui, por exemplo, 2000 milissegundos = 2 segundos
+    });
     </script>
 
 
