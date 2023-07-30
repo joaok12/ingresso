@@ -5,7 +5,7 @@
 }
 body,
 html {
-  padding:0;
+  padding: 0;
 }
 
 body {
@@ -117,24 +117,24 @@ div {
   width: 100%;
 }
 hr {
-  width: 250px;
+  width: 270px;
   height: 0.1px;
   position: absolute;
-  left: 27px;
+  left: 20px;
   text-decoration: 0;
   border-style: solid;
   border: 0;
   background-color: rgb(255, 255, 255, 0.6);
 }
 
-.corte{
+.corte {
   position: absolute;
-  bottom: -80.6px;
+  bottom: -61.1px;
 }
-.ticket_top{
+.ticket_top {
   z-index: 999;
 }
-.ticket_bottom{
+.ticket_bottom {
   z-index: 999;
 }
 
@@ -206,7 +206,7 @@ hr {
   border-radius: 8px;
   position: absolute;
   top: 268px;
-  display:none;
+  display: none;
   left: 196px;
 }
 .loader,
@@ -232,55 +232,10 @@ hr {
   text-align: center;
   padding: 15px 10px;
 }
-.alerta{
+.alerta {
   position: absolute;
   bottom: -508px;
   z-index: 999;
-}
-
-
-.alert {
-  bottom: 70px;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  z-index: 999;
-  width: 311px;
-  left: -156px;
-}
-.alert hr {
-  position: absolute;
-  left: -11px;
-  width: 370px;
-  height: 1px;
-  background-color: rgba(75, 75, 75, 0.1);
-}
-.options {
-  color: rgb(0, 132, 255);
-  font-size: 14px;
-  text-align: center;
-  padding: 14px 8px;
-}
-.options2 {
-  color: rgb(0, 132, 255);
-  font-size: 14px;
-  text-align: center;
-  padding: 14px 8px;
-}
-
-.message {
-  bottom: -520px;
-}
-.message {
-  transition: transform 1s ease;
-}
-
-.message.slide {
-  transform: translateY(0);
-}
-
-.message {
-  transform: translateY(100%);
 }
 
 .loader:before {
@@ -288,20 +243,18 @@ hr {
   transform: rotate(45deg);
 }
 
-.pergunta{
+.pergunta {
   color: rgb(0, 0, 0, 0.4);
   font-size: 10px;
   text-align: center;
   padding: 15px 20px 10px 20px;
-  /* bottom: -66px; */
-  /* position: absolute; */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px 10px 0px 0px;
   z-index: 999;
   width: 324px;
   left: 45px;
 }
-.opcao1{
+.opcao1 {
   color: rgb(0, 132, 255);
   font-size: 14px;
   text-align: center;
@@ -309,11 +262,11 @@ hr {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 0px 0px 10px 10px;
 }
-.opcao1:hover{
-  background-color:rgba(255, 255, 255, 0.5) ;
+.opcao1:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.opcao2{
+.opcao2 {
   color: rgb(0, 132, 255);
   font-size: 14px;
   text-align: center;
@@ -326,7 +279,63 @@ hr {
   font-weight: 600;
 }
 
+.atencao {
+  position: absolute;
+  background-color: rgba(255, 136, 0, 0.222);
+  top: 500px;
+  padding: 10px 20px;
+  width: 310px;
+  border-radius: 10px 10px 10px 10px;
+  height: 85px;
+}
+.atencao::before {
+  content: "";
+  height: 85px;
+  width: 7px;
+  background-color: orange;
+  position: absolute;
+  top: 0px;
+  left: 1.5px;
+  border-radius: 5px 0px 0px 5px;
+}
+.exclamacao {
+  position: absolute;
+  top: 9px;
+  left: 15px;
+}
 
+.atencao_p {
+  color: orange;
+  font-size: 13px;
+  padding: 0px 0px 20px 18px;
+}
+
+.atencao_text {
+  color: rgba(255, 255, 255, 0.818);
+  font-size: 12px;
+}
+.verificado {
+  display: flex;
+  position: absolute;
+  top: 304px;
+  left: 56px;
+  align-items: center;
+  justify-content: center;
+}
+.verificado p {
+  font-size: 9px;
+  color: rgb(86, 191, 86);
+  margin-left: 5px;
+}
+
+.tracim {
+  margin: 3.8px;
+  padding: 0;
+  width: 20px;
+  height: 1px;
+  background-color: rgb(86, 191, 86);
+  z-index: 99;
+}
 
 @keyframes load {
   from {
