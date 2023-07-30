@@ -242,16 +242,18 @@
 
     <div class="loader"></div>
 
+<!-- ALERTA -->
 
-
-    <div class="message">
-      <div class="alert">
-        <p class="question">Você está no cinema e mostrando seu(s) ingresso(s) ao<br> bilheteiro? </p>
-        <hr>
-        <p class="options"> Sim, use meu(s) ingresso(s) agora.</p>
+    <div class="alerta">
+      <div class="pergunta">
+        <p class="p1">Você está no cinema e mostrando seu(s) ingresso(s) ao<br> bilheteiro?</p>
       </div>
-
-      <p class="options">Não, use meu(s) ingressos(s) depois.</p>
+      <div class="opcao1">
+        <p class="p2">Sim, use meu(s) ingresso(s) agora.</p>
+      </div>
+      <div class="opcao2">
+        <p>Não, use meu(s) ingressos(s) depois.</p>
+      </div>
     </div>
 
 
@@ -279,8 +281,8 @@
           var difference = current - start;
 
           if (difference > 200) {
-            var options = document.querySelector('.message');
-            options.style.transform = 'translateY(-200px)';
+            var options = document.querySelector('.alerta');
+            options.style.transform = 'translateY(-154px)';
             options.style.transition = 'transform 0.5s ease';
           }
         }
@@ -292,7 +294,7 @@
           var end = event.changedTouches.item(0).clientX;
 
           if (end > start + offset) {
-            var message = document.querySelector('.message');
+            var message = document.querySelector('.alerta');
             message.style.display = 'block';
             message.classList.add('slide');
           } else {
@@ -301,21 +303,13 @@
         }
       });
 
-      document.querySelector(".options").addEventListener("click", function () {
-        var message = document.querySelector('.message');
+      document.querySelector(".opcao1").addEventListener("click", function () {
+        var message = document.querySelector('.alerta');
         message.classList.remove('slide');
       });
 
 
-
-
-
-
-
-
-
-
-      document.querySelector('.options').addEventListener('click', function () {
+      document.querySelector('.opcao1').addEventListener('click', function () {
         var elements = document.querySelectorAll('.corte');
 
         elements.forEach(function (element) {
@@ -330,6 +324,9 @@
             fill: 'forwards'  // keep the element at the last keyframe value
           });
         });
+        var options = document.querySelector('.alerta');
+            options.style.transform = 'translateY(-2px)';
+            options.style.transition = 'transform 0.2s ease-out';
       });
 
     </script>
@@ -337,7 +334,45 @@
 
 
 
-  </div>
+  
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 </body>
 
 </html>
