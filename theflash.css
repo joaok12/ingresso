@@ -196,10 +196,6 @@ hr {
   opacity: 0.4;
   z-index: 999;
 }
-.ticket{
-  position: relative;
-}
-
 .loader {
   width: 35px; /* control the size */
   aspect-ratio: 1;
@@ -211,11 +207,7 @@ hr {
   position: absolute;
   top: 268px;
   display:none;
-  left: 203px;
-  top: 78%; /* Coloca o elemento a 50% da altura do elemento pai */
-  left: 47.3%; /* Coloca o elemento a 50% da largura do elemento pai */
-  transform: translate(-50%, -50%); /* Centraliza o elemento no seu próprio centro */
-  /* Adicione aqui outros estilos específicos para o elemento */
+  left: 196px;
 }
 .loader,
 .loader:before {
@@ -223,7 +215,6 @@ hr {
   background: var(--_g) / 34% 8% space no-repeat,
     var(--_g) / 8% 34% no-repeat space;
 }
-
 
 .message {
   /* bottom: 0px; */
