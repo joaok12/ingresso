@@ -18,10 +18,15 @@
 </head>
 
 <body class="no-scroll">
+  <div class="pedido">
+    <p>Pedido</p>
+    <img class="x" src="./images/x-10326.png">
+  </div>
   <div class="ticket animacao-entrada">
-    <footer> <span class="titulo">Mostre esse ingresso na entrada da sessão</span>
-    </footer>
+    <nav> <span class="titulo">Mostre esse ingresso na entrada da sessão</span>
+    </nav>
     <!-- PRIMEIRO -->
+    <!-- <div class="tudo"> -->
     <div class="div-primeiro">
       <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="230.000000pt" viewBox="0 0 968.000000 169.000000" preserveAspectRatio="xMidYMid meet">
 
@@ -262,6 +267,18 @@
     <div class="politicas">
       <p>Politicas de troca e cancelamento</p>
     </div>
+    <div class="politicas2">
+      <img class="paper_icon" src="./images/paper_icon_azul.png">
+      <p>Politicas de troca e cancelamento</p>
+    </div>
+    <div class="ajuda">
+      <img class="question_icon" src="./images/question-11800 (1).png">
+      <p>Central de ajuda</p>
+    </div>
+    <div class="cancelar">
+      <img class="trash_icon" src="./images/trash-can-10416.png">
+      <p>Cancelar pedido</p>
+    </div>
 
 
     <div class="verificado">
@@ -285,6 +302,8 @@
       <span class="tracim"></span>
 
     </div>
+  <!-- </div> -->
+
 
     <!-- ALERTA -->
 
@@ -361,6 +380,8 @@
 
       document.querySelector('.opcao1').addEventListener('click', function () {
         var elements = document.querySelectorAll('.corte');
+        var atencao = document.querySelectorAll('.atencao')
+
 
         setTimeout(function () {
 
@@ -375,14 +396,29 @@
               iterations: 1,
               fill: 'forwards',  // keep the element at the last keyframe value
               easing: 'ease-out'  // adicionando o efeito ease-in-out
-            });
+            }
+            );
           });
+        
+
+          
           const bolinhas = document.querySelector('.bolinhas')
           bolinhas.style.opacity = 0
           const loadBtn = document.querySelector('.loader')
           const circuloPreto = document.querySelector('.circle')
           loadBtn.style.display = 'none';
           circuloPreto.style.opacity = 0
+          
+          const atencao = document.querySelector('.atencao')
+          atencao.style.display = 'block'
+          const cancelar = document.querySelector('.cancelar')
+          cancelar.style.display = 'none'
+
+          const politicas = document.querySelector('.politicas2')
+          politicas.style.display = 'flex'
+          const ajuda = document.querySelector('.ajuda')
+          ajuda.style.display = 'flex'
+
 
         }, 1500);
 
