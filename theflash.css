@@ -6,7 +6,7 @@
 body,
 html {
   padding: 0;
-  margin-top: 21px;
+  margin-top: 4px;
 }
 
 body {
@@ -29,12 +29,12 @@ div {
   position: absolute;
   left: 167px;
   color: white;
-  top: 18px;
+  top: 25px;
   position: relative;
 }
 .x{
-  height: 21px;
-  left: 169px;
+  height: 17px;
+  left: 173px;
   top: 0;
   position: absolute;
   opacity: 0.7;
@@ -240,7 +240,7 @@ hr {
 
 .alerta {
   position: absolute;
-  bottom: -399px;
+  bottom: -444px;
   z-index: 999;
 }
 
@@ -262,7 +262,7 @@ hr {
 }
 .opcao1 {
   color: rgb(0, 132, 255);
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   padding: 14px 8px;
   background: rgba(255, 255, 255, 0.8);
@@ -274,7 +274,7 @@ hr {
 
 .opcao2 {
   color: rgb(0, 132, 255);
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
   padding: 14px 8px;
   background: white;
@@ -319,13 +319,13 @@ hr {
 
 .atencao_text {
   color: rgb(255 255 255 / 76%);
-  font-size: 12px;
+  font-size: 11px;
 }
 .verificado {
   display: flex;
   position: absolute;
   top: 304px;
-  left: 56px;
+  left: 47px;
   align-items: center;
   justify-content: center;
   z-index: 0;
@@ -346,9 +346,9 @@ hr {
 
 .politicas2{
   font-size: 11px;
-  top: 594px;
+  top: 581px;
   color: #0aa3ff;
-  left: 65px;
+  left: 50px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -370,20 +370,30 @@ hr {
 
 .ajuda{
   font-size: 11px;
-  top: 625px;
+  top: 605px;
   color: #0aa3ff;
-  left: 61px;
+  left: 44px;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   display: none;
 }
+.cancelar_texto{
+  font-size: 8px;
+  top: 433px;
+  color: white;
+  left: 51px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .cancelar{
   font-size: 11px;
-  top: 435px;
+  top: 464px;
   color: #0aa3ff;
-  left: 61px;
+  left: 51px;
   position: absolute;
   display: flex;
   align-items: center;
