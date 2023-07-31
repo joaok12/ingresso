@@ -133,13 +133,13 @@ div {
 }
 hr {
   width: 270px;
-  height: 0.1px;
+  height: 0.6px;
   position: absolute;
   left: 20px;
   text-decoration: 0;
   border-style: solid;
   border: 0;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.781);
 }
 
 .corte {
@@ -287,7 +287,7 @@ hr {
 
 .atencao {
   position: absolute;
-  background-color: rgba(255, 136, 0, 0.222);
+  background-color: rgb(156 85 3 / 22%);
   top: 483px;
   padding: 10px 20px;
   width: 310px;
@@ -398,6 +398,8 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.ispinner{
 }
 
 @keyframes load {
