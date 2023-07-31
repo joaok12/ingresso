@@ -6,6 +6,7 @@
 body,
 html {
   padding: 0;
+  margin-top: 21px;
 }
 
 body {
@@ -23,6 +24,20 @@ body {
 
 div {
   margin: 0;
+}
+.pedido{
+  position: absolute;
+  left: 183px;
+  color: white;
+  top: 18px;
+  position: relative;
+}
+.x{
+  height: 25px;
+  left: 167px;
+  top: -2px;
+  position: absolute;
+  opacity: 0.7;
 }
 
 .titulo {
@@ -130,6 +145,7 @@ hr {
 .corte {
   position: absolute;
   bottom: -60px;
+  z-index: 1;
 }
 .ticket_top {
   z-index: 999;
@@ -154,9 +170,9 @@ hr {
   content: "";
   position: absolute;
   width: 130px;
-  height: 1500px;
-  top: -51px;
-  left: -130px;
+  height: 1531px;
+  top: -69px;
+  left: -128.6px;
   background-color: rgb(49, 49, 49);
   z-index: 999;
 }
@@ -182,6 +198,9 @@ hr {
   height: 58px;
   /* bottom: -137px; */
   /* left: 0px; */
+  opacity: 0.4;
+  z-index: 3;
+  transition: 0.5;
 }
 
 .circle::before {
@@ -193,7 +212,6 @@ hr {
   height: 100%;
   border-radius: 50%;
   background-color: rgb(0, 0, 0);
-  opacity: 0.4;
   z-index: 999;
 }
 .loader {
@@ -208,6 +226,8 @@ hr {
   top: 268px;
   display: none;
   left: 196px;
+  z-index: 2;
+  opacity: 1;
 }
 .loader,
 .loader:before {
@@ -216,25 +236,11 @@ hr {
     var(--_g) / 8% 34% no-repeat space;
 }
 
-.message {
-  /* bottom: 0px; */
-  position: absolute;
-  font-size: 14px;
-  background-color: rgba(255, 255, 255, 0.918);
-  border-radius: 10px;
-  z-index: 999;
-  /* width: 342px; */
-}
 
-.question {
-  color: rgb(0, 0, 0, 0.4);
-  font-size: 10px;
-  text-align: center;
-  padding: 15px 10px;
-}
+
 .alerta {
   position: absolute;
-  bottom: -508px;
+  bottom: -445px;
   z-index: 999;
 }
 
@@ -282,11 +288,12 @@ hr {
 .atencao {
   position: absolute;
   background-color: rgba(255, 136, 0, 0.222);
-  top: 500px;
+  top: 483px;
   padding: 10px 20px;
   width: 310px;
   border-radius: 10px 10px 10px 10px;
   height: 85px;
+  display: none;
 }
 .atencao::before {
   content: "";
@@ -311,7 +318,7 @@ hr {
 }
 
 .atencao_text {
-  color: rgba(255, 255, 255, 0.818);
+  color: rgb(255 255 255 / 76%);
   font-size: 12px;
 }
 .verificado {
@@ -321,6 +328,7 @@ hr {
   left: 56px;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 .verificado p {
   font-size: 9px;
@@ -334,7 +342,52 @@ hr {
   width: 20px;
   height: 1px;
   background-color: rgb(86, 191, 86);
-  z-index: 99;
+}
+
+.politicas2{
+  font-size: 11px;
+  top: 594px;
+  color: #0aa3ff;
+  left: 65px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.paper_icon{
+  height: 16px;
+  margin-right: 11px;
+}
+.question_icon{
+  height: 25px;
+  margin-right: 5px;
+}
+.trash_icon{
+  height: 19px;
+  margin-right: 13px;
+}
+
+.ajuda{
+  font-size: 11px;
+  top: 625px;
+  color: #0aa3ff;
+  left: 61px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.cancelar{
+  font-size: 11px;
+  top: 435px;
+  color: #0aa3ff;
+  left: 61px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes load {
