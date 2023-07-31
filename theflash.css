@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  zoom: 1; /* Aumenta a escala em 20% (1.0 = 100%) */
+  zoom: 1.06; /* Aumenta a escala em 20% (1.0 = 100%) */
   -moz-transform: scale(1.2); /* Para o Firefox */
   -webkit-transform: scale(1.2); /* Para o Chrome, Safari, Opera */
   -o-transform: scale(1.2); /* Para o Opera (antigo) */
@@ -27,15 +27,15 @@ div {
 }
 .pedido{
   position: absolute;
-  left: 183px;
+  left: 167px;
   color: white;
   top: 18px;
   position: relative;
 }
 .x{
-  height: 25px;
-  left: 167px;
-  top: -2px;
+  height: 21px;
+  left: 169px;
+  top: 0;
   position: absolute;
   opacity: 0.7;
 }
@@ -225,7 +225,7 @@ hr {
   position: absolute;
   top: 268px;
   display: none;
-  left: 196px;
+  left: 182px;
   z-index: 2;
   opacity: 1;
 }
@@ -240,7 +240,7 @@ hr {
 
 .alerta {
   position: absolute;
-  bottom: -445px;
+  bottom: -399px;
   z-index: 999;
 }
 
